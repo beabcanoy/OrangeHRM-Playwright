@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 
 test('login orangehrm successful', async ({ page }) => {
-  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'networkidle' });
   await expect(page).toHaveURL(/login/);
 
   await page.locator('input[name="username"]').fill('Admin');
@@ -21,6 +21,14 @@ test('login orangehrm successful', async ({ page }) => {
 
   await page.locator('.oxd-select-text').first().click();
   await page.getByRole('option', { name: 'Admin' }).click();
+
+  await page.getByPlaceholder('Type for hints...').click();
+
+  await page.getByPlaceholder('Type for hints...').fill('A');
+
+  await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('Enter');
+
 
 });
 
