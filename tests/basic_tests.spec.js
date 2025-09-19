@@ -18,14 +18,11 @@ test('login orangehrm successful', async ({ page }) => {
 
   await page.locator('.oxd-select-text').first().click();
   await page.getByRole('option', { name: 'Admin' }).click();
-
   await page.locator('.oxd-select-text').first().click();
   await page.getByRole('option', { name: 'Admin' }).click();
 
   await page.getByPlaceholder('Type for hints...').click();
-
   await page.getByPlaceholder('Type for hints...').fill('A');
-
   await page.keyboard.press('ArrowDown');
   await page.keyboard.press('Enter');
 
