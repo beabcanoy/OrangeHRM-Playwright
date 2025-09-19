@@ -6,7 +6,7 @@ This repository includes simple login tests and can be extended to cover employe
 ---
 
 ## 📌 Features
-- ⚡ Playwright setup with Chromium, Firefox, and WebKit.  
+- ⚡ Playwright setup with Chromium.  
 - 🔑 Example login test using OrangeHRM demo site.
 
 ---
@@ -16,20 +16,25 @@ This repository includes simple login tests and can be extended to cover employe
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/basic-playwright-orangehrm.git
-   cd basic-playwright-orangehrm
 
 2. Install dependencies:
-    ``` npm install
+    ``` bash
+    npm install
 
 3. Install browsers:
-    ``` npx playwright install
+    ``` bash
+    npx playwright install
 
 ### Running Tests
-    * Run all test
-    ``` npx playwright test
 
-    * Run with UI mode:
-    ``` npx playwright test --ui
+* Run all test:
+   ``` bash
+    npx playwright test
 
-    * Run in a specific browser:
-    ``` npx playwright test --project=chromium
+* Run with UI mode:
+   ``` bash
+    npx playwright test --ui
+
+* Run in a specific browser:
+   ``` bash
+    npx playwright test --project=chromium
